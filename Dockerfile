@@ -1,7 +1,6 @@
 FROM ubuntu
-RUN sudo apt-get update -y
-RUN sudo apt-get install -y apache2
-RUN sudo systemctl start apache2
-RUN sudo systemctl enable apache2
+RUN apt-get update
+RUN apt-get install -y apache2
 ADD . /var/www/html
+EXPOSE 80
 ENTRYPOINT apachectl -D FOREGROUND
