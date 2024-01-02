@@ -12,9 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v2
-
+      
     - name: Set up Apache and PHP
       run: |
         sudo apt-get update -y
